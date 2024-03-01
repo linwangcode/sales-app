@@ -14,7 +14,7 @@ st.set_page_config(
 navigation_items = {
     "Homepage": "https://sales-app-homepage1.streamlit.app/",
     "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
-    "Products Dash": "none"
+    "Products Dash": "none",
     "Customers Dash": "https://nothwindtraderscustomer.streamlit.app/~/+/"
 }
 
