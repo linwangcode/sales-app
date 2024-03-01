@@ -7,6 +7,13 @@ page_title="Home",
 page_icon="🏠", layout="wide",
 initial_sidebar_state="expanded")
 
+# Define the navigation items and their corresponding URLs
+navigation_items = {
+    "Homepage": "https://sales-app-homepage1.streamlit.app/",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+}
+
 st.write("# 📊 Northwind Trader Sales Report")
 
 # Load your image
@@ -32,3 +39,11 @@ st.markdown(
     - Find the top 3 employees by sales revenue
     """
     )
+
+st.write('---')  # Add a horizontal line to separate the navigation bar from the content
+
+st.write("## Navigation")
+
+# Iterate through the navigation items and create links
+for item, url in navigation_items.items():
+    st.markdown(f"[{item}]({url})")
