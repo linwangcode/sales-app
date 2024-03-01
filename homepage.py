@@ -29,6 +29,7 @@ with st.sidebar:
     # Redirect based on selected item
     if selected_item in navigation_items:
         st.markdown(f"[{selected_item}]({navigation_items[selected_item]})")
+    st.sidebar.write("") 
 
 st.markdown(
     """
