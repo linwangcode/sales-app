@@ -23,8 +23,9 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
-    for item, url in navigation_items.items():
-        st.markdown(f'[ {item} ]({url})')
+    st.buttons(navigation_items.items)
+        for item, url in navigation_items.items():
+            st.markdown(f'[ {item} ]({url})')
 
 # Create a hidden iframe element
 st.markdown('<iframe id="frame" name="frame" style="display: none;"></iframe>', unsafe_allow_html=True)
