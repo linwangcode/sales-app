@@ -26,21 +26,12 @@ with st.sidebar:
     st.write("## Navigation")
     selected_item = st.selectbox("Select a dashboard", list(navigation_items.keys()))
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
-    # Redirect based on selected item using JavaScript
-    redirect_script = f"""
-    <script>
-        function redirectToPage() {{
-            var selectbox = document.getElementById('selectbox');
-            var selectedOption = selectbox.options[selectbox.selectedIndex].value;
-            window.location.href = selectedOption;
-        }}
-        document.getElementById('selectbox').addEventListener('change', redirectToPage);
-    </script>
-    """
-    st.markdown(redirect_script, unsafe_allow_html=True)
-
-    # Adding an empty line to create space
-    st.sidebar.write("") 
+    
+# Redirect based on selected item
+if selected_item in navigation_items:
+    st.write(f"Redirecting to {selected_item}...")
+    st.write(f"You will be redirected to {navigation_items[selected_item]} in a moment.")
+    # Redirect logic goes here, but it would navigate you away from the current page.
 
 st.markdown(
     """
