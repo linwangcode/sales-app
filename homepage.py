@@ -9,7 +9,6 @@ initial_sidebar_state="expanded")
 
 # Define the navigation items and their corresponding URLs
 navigation_items = {
-    "Homepage": "https://sales-app-homepage1.streamlit.app/",
     "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
     "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
 }
@@ -23,6 +22,10 @@ st.sidebar.image(image, use_column_width=True)
 # Sidebar
 with st.sidebar:
     st.title('🏠 Home')
+    st.write("## Navigation")
+    selected_item = st.selectbox("Select a dashboard", list(navigation_items.keys()))
+    if selected_item in navigation_items:
+        st.markdown(f"[{selected_item}]({navigation_items[selected_item]})")
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 st.markdown(
