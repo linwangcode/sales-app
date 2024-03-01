@@ -27,7 +27,7 @@ with st.sidebar:
     selected_item = st.radio("Select a dashboard", list(navigation_items.keys()))
     # Display selected page based on the navigation
     if selected_item:
-        selected_url = navigation_items[selected_item]
+        selected_item = navigation_items[selected_item]
         st.markdown(f"Redirecting to [{selected_item}]({selected_url})...")
         st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
