@@ -25,11 +25,11 @@ with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
     selected_item = st.radio("Select a dashboard", list(navigation_items.keys()))
-    st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
-    
-# Function to generate HTML anchor tags for navigation
-def generate_link(item_name, item_url):
-    return f'<a href="{item_url}" target="_blank">{item_name}</a>'
+    # Display selected page based on the navigation
+    if selected_item:
+        selected_url = navigation_items[selected_item]
+        st.markdown(f"Redirecting to [{selected_item}]({selected_url})...")
+        st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 st.markdown(
     """
