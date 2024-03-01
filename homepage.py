@@ -11,7 +11,7 @@ initial_sidebar_state="expanded")
 navigation_items = {
     "Homepage": "none",
     "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
-    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/",
     "Customers Dash": "https://nothwindtraderscustomer.streamlit.app/~/+/"
 }
 st.write("# 📊 Northwind Trader Sales Report")
