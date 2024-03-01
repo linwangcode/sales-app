@@ -42,10 +42,6 @@ with st.sidebar:
     # Adding an empty line to create space
     st.sidebar.write("") 
 
-# Display the selected dashboard
-if selected_item in navigation_items:
-    st.markdown(f"Redirecting to [{selected_item}]({navigation_items[selected_item]})...")
-
 st.markdown(
     """
     Northwind Traders, a fictitious gourmet food supplier. This app aims to report to **a sales manager**
