@@ -8,6 +8,12 @@ st.set_page_config(
     page_icon="⭐", layout="wide",
     initial_sidebar_state="expanded")
 
+# Define the navigation items and their corresponding URLs
+navigation_items = {
+    "Homepage": "none",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+
 #######################
 # Load data
 order_details = pd.read_csv('order_details.csv')
@@ -26,13 +32,6 @@ revenue_data = revenue_data.groupby(['Year', 'Month'])['Revenue'].sum().reset_in
 
 # Convert 'Month' column to categorical with the defined order
 revenue_data['Month'] = pd.Categorical(revenue_data['Month'])
-
-#######################
-# Define the navigation items and their corresponding URLs
-navigation_items = {
-    "Homepage": "none",
-    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
-    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
 
 #######################
 # Sidebar
