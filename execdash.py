@@ -13,6 +13,7 @@ navigation_items = {
     "Homepage": "none",
     "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
     "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+}
 
 #######################
 # Load data
