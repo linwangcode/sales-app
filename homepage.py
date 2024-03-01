@@ -9,9 +9,9 @@ initial_sidebar_state="expanded")
 
 # Define the navigation items and their corresponding URLs
 navigation_items = {
-    "Homepage": "/",
-    "Exec Dash": "/exec_dash",
-    "Products Dash": "/products_dash"
+    "Homepage": "none",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
 }
 st.write("# 📊 Northwind Trader Sales Report")
 
