@@ -28,6 +28,13 @@ revenue_data = revenue_data.groupby(['Year', 'Month'])['Revenue'].sum().reset_in
 revenue_data['Month'] = pd.Categorical(revenue_data['Month'])
 
 #######################
+# Define the navigation items and their corresponding URLs
+navigation_items = {
+    "Homepage": "none",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+
+#######################
 # Sidebar
 # Load your image
 image = 'northwindlogo.png'
@@ -40,6 +47,11 @@ with st.sidebar:
     selected_year = st.sidebar.selectbox('Select a year', year_list)
     st.sidebar.subheader('Product Analysis')
     selected_category = st.sidebar.selectbox("Select a category", categories["categoryName"].unique())
+    # Navigation
+    st.write("## Navigation")
+    for item, url in navigation_items.items():
+        st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
+        
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 # Filter data based on selected year
