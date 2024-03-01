@@ -25,8 +25,10 @@ with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
     for item, url in navigation_items.items():
-        if st.button(item):
-            st.markdown(f'<a href="{url}" target="_blank">{item}</a>', unsafe_allow_html=True)
+        st.markdown(f'<a href="{url}" target="frame">{item}</a>', unsafe_allow_html=True)
+
+# Create a hidden iframe element
+st.markdown('<iframe id="frame" name="frame" style="display: none;"></iframe>', unsafe_allow_html=True)
             
 st.markdown(
     """
