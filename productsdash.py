@@ -10,6 +10,13 @@ st.set_page_config(
     page_icon="🥕", layout="wide",
     initial_sidebar_state="expanded")
 
+# Define the navigation items and their corresponding URLs
+navigation_items = {
+    "Homepage": "none",
+    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
+    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+}
+
 #######################
 # Load data
 order_details = pd.read_csv('order_details.csv')
@@ -36,6 +43,7 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🥕 Products')
     selected_year = st.selectbox('Select a year', options=sorted(merged_df['year'].unique(), reverse=True))
+    
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 filtered_df = merged_df[merged_df['year'] == selected_year]
