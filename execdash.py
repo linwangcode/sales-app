@@ -13,6 +13,7 @@ navigation_items = {
     "Homepage": "https://sales-app-homepage1.streamlit.app/",
     "Exec Dash": "none",
     "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+    "Customers Dash": "https://nothwindtraderscustomer.streamlit.app/~/+/"
 }
 
 #######################
