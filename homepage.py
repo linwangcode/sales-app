@@ -33,12 +33,3 @@ st.markdown(
     - Find the top 3 employees by sales revenue
     """
     )
-
-if selected_category == "Exec Dash":
-    st.markdown("### Exec Dashboard")
-    st.markdown("[Click here to go to Exec Dashboard](execdash.py)")
-
-# Link to productsdash
-if selected_category == "Products":
-    st.markdown("### Products Dashboard")
-    st.markdown("[Click here to go to Products Dashboard](productsdash.py)")
