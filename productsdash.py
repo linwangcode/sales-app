@@ -12,9 +12,9 @@ st.set_page_config(
 
 # Define the navigation items and their corresponding URLs
 navigation_items = {
-    "Homepage": "none",
+    "Homepage": "https://sales-app-homepage1.streamlit.app/",
     "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
-    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+    "Products Dash": "none"
 }
 
 #######################
