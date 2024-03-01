@@ -28,6 +28,10 @@ merged_df['year'] = merged_df['orderDate'].dt.year
 merged_df['month'] = merged_df['orderDate'].dt.month
 
 #######################
+# Load your image
+image = 'northwindlogo.png'
+st.sidebar.image(image, use_column_width=True)
+
 # Sidebar
 with st.sidebar:
     st.title('🥕 Products')
