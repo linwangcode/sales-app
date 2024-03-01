@@ -1,4 +1,4 @@
-# sales-app
+# This streamlit app contains dashboards for Northwind Trader
 # Hompage
 https://sales-app-homepage1.streamlit.app/
 
