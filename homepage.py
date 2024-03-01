@@ -24,13 +24,11 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
-    selected_item = st.radio("Select a dashboard", list(navigation_items.keys()))
-    # Display selected page based on the navigation
-    if selected_item:
-        selected_item = navigation_items[selected_item]
-        st.markdown(f"Redirecting to [{selected_item}]({selected_url})...")
-        st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
-
+    for item_name, item_url in navigation_items.items():
+        if st.button(item_name):
+            st.markdown(f"Redirecting to [{item_name}]({item_url})...")
+            st.experimental_rerun()
+            
 st.markdown(
     """
     Northwind Traders, a fictitious gourmet food supplier. This app aims to report to **a sales manager**
