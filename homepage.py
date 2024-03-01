@@ -16,7 +16,6 @@ st.sidebar.image(image, use_column_width=True)
 # Sidebar
 with st.sidebar:
     st.title('🏠 Home')
-    selected_category = st.sidebar.selectbox("Select a dashboard", options=["Exec Dash", "Products", "Customers"])
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 st.markdown(
