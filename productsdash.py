@@ -43,6 +43,9 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🥕 Products')
     selected_year = st.selectbox('Select a year', options=sorted(merged_df['year'].unique(), reverse=True))
+    st.write("## Navigation")
+    for item, url in navigation_items.items():
+        st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
     
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
