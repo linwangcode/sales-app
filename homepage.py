@@ -24,14 +24,8 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
-    selected_item = st.selectbox("Select a dashboard", list(navigation_items.keys()))
+    selected_item = st.radio("Select a dashboard", list(navigation_items.keys()))
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
-    
-# Redirect based on selected item
-if selected_item in navigation_items:
-    st.write(f"Redirecting to {selected_item}...")
-    st.write(f"You will be redirected to {navigation_items[selected_item]} in a moment.")
-    # Redirect logic goes here, but it would navigate you away from the current page.
 
 st.markdown(
     """
