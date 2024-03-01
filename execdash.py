@@ -15,11 +15,11 @@ st.set_page_config(
 
 #######################
 # Load data
-order_details = pd.read_csv(r'C:\Users\Alina\Streamlit Web App for Data Viz\Northwind Traders_streamlit web app\order_details.csv')
-orders = pd.read_csv(r'C:\Users\Alina\Streamlit Web App for Data Viz\Northwind Traders_streamlit web app\orders.csv')
-products = pd.read_csv(r'C:\Users\Alina\Streamlit Web App for Data Viz\Northwind Traders_streamlit web app\products.csv', encoding='latin1')
-categories = pd.read_csv(r'C:\Users\Alina\Streamlit Web App for Data Viz\Northwind Traders_streamlit web app\categories.csv', encoding='latin1')
-employees = pd.read_csv(r'C:\Users\Alina\Streamlit Web App for Data Viz\Northwind Traders_streamlit web app\employees.csv', encoding='latin1')
+order_details = pd.read_csv('order_details.csv')
+orders = pd.read_csv('orders.csv')
+products = pd.read_csv('products.csv', encoding='latin1')
+categories = pd.read_csv('categories.csv', encoding='latin1')
+employees = pd.read_csv('employees.csv', encoding='latin1')
 
 # Prepare the data: Aggregate revenue by year and month
 orders['orderDate'] = pd.to_datetime(orders['orderDate'])
