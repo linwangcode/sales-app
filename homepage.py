@@ -26,7 +26,7 @@ with st.sidebar:
     st.write("## Navigation")
     for item, url in navigation_items.items():
         if st.button(item):
-            st.markdown(f'[Streamlit]({url})')
+            st.markdown(f'<a href="{url}" target="_blank">{item}</a>', unsafe_allow_html=True)
             
 st.markdown(
     """
