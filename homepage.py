@@ -27,11 +27,9 @@ with st.sidebar:
     selected_item = st.radio("Select a dashboard", list(navigation_items.keys()))
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
     
-# Redirect based on selected item
-if selected_item in navigation_items:
-    st.write(f"Redirecting to {selected_item}...")
-    st.write(f"You will be redirected to {navigation_items[selected_item]} in a moment.")
-    st.markdown(f"[Click here to go to {selected_item}]({navigation_items[selected_item]})")
+# Function to generate HTML anchor tags for navigation
+def generate_link(item_name, item_url):
+    return f'<a href="{item_url}" target="_blank">{item_name}</a>'
 
 st.markdown(
     """
