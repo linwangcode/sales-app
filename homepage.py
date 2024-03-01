@@ -24,8 +24,6 @@ with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
     selected_item = st.selectbox("Select a dashboard", list(navigation_items.keys()))
-    if selected_item in navigation_items:
-        st.markdown(f"[{selected_item}]({navigation_items[selected_item]})")
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 st.markdown(
