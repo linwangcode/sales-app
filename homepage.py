@@ -24,10 +24,9 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
-    for item_name, item_url in navigation_items.items():
-        if st.button(item_name):
-            st.markdown(f"Redirecting to [{item_name}]({item_url})...")
-            st.experimental_rerun()
+    for item, url in navigation_items.items():
+        if st.button(item):
+            st.markdown(f'[Streamlit]({url})')
             
 st.markdown(
     """
