@@ -26,6 +26,9 @@ with st.sidebar:
     st.write("## Navigation")
     selected_item = st.selectbox("Select a dashboard", list(navigation_items.keys()))
     st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
+    # Redirect based on selected item
+    if selected_item in navigation_items:
+        st.markdown(f"[{selected_item}]({navigation_items[selected_item]})")
 
 st.markdown(
     """
