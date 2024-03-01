@@ -9,11 +9,10 @@ initial_sidebar_state="expanded")
 
 # Define the navigation items and their corresponding URLs
 navigation_items = {
-    "Homepage": "https://sales-app-homepage1.streamlit.app/",
-    "Exec Dash": "https://sales-app-execdash1.streamlit.app/",
-    "Products Dash": "https://sales-app-itemsdash1.streamlit.app/"
+    "Homepage": "/",
+    "Exec Dash": "/exec_dash",
+    "Products Dash": "/products_dash"
 }
-
 st.write("# 📊 Northwind Trader Sales Report")
 
 # Load your image
@@ -25,7 +24,7 @@ with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
     for item, url in navigation_items.items():
-        st.markdown(f'<a href="{url}" target="frame">{item}</a>', unsafe_allow_html=True)
+        st.markdown(f'[ {item} ]({url})')
 
 # Create a hidden iframe element
 st.markdown('<iframe id="frame" name="frame" style="display: none;"></iframe>', unsafe_allow_html=True)
