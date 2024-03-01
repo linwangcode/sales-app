@@ -23,7 +23,6 @@ st.sidebar.image(image, use_column_width=True)
 with st.sidebar:
     st.title('🏠 Home')
     st.write("## Navigation")
-    st.buttons(item)
     for item, url in navigation_items.items():
         st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
 
