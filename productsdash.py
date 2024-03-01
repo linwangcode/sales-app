@@ -46,7 +46,7 @@ with st.sidebar:
     st.write("## Navigation")
     for item, url in navigation_items.items():
         st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
-    st.sidebar.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
+    st.markdown('''Created with ❤️ by **Lin WANG & Shuhui TANG**''')
 
 filtered_df = merged_df[merged_df['year'] == selected_year]
 
