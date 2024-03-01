@@ -25,7 +25,7 @@ with st.sidebar:
     st.write("## Navigation")
     st.buttons(item)
     for item, url in navigation_items.items():
-        st.markdown(f'[ {item} ]({url})')
+        st.markdown(f"[ {item} ]({url})", unsafe_allow_html=True)
 
 # Create a hidden iframe element
 st.markdown('<iframe id="frame" name="frame" style="display: none;"></iframe>', unsafe_allow_html=True)
