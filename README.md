@@ -6,7 +6,7 @@ https://sales-app-homepage1.streamlit.app/
 # Exec Dash
 https://sales-app-execdash1.streamlit.app/
 
-# Products Dash
+# Products Dash (Shuhui TANG, my teammate made this dash)
 https://sales-app-itemsdash1.streamlit.app/
 
 # Customers Dash
